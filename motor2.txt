@@ -21,46 +21,30 @@ void setup()
 void spin_OneRev()
 {  
   
-  digitalWrite(4,HIGH); // Set Dir high  
+  digitalWrite(4,HIGH); // Set Dir high for motor 1
+  digitalWrite(13,HIGH); // Set Dir high for motor 2 
     
   for(x = 0; x < 800; x++) // Loop 200 times  
   {  
-      digitalWrite(5,HIGH); // Output high  
+      digitalWrite(5,HIGH); // Output high for motor 1 
+      digitalWrite(12,HIGH); // Output high for motor 2  
       delayMicroseconds(800 ); // Wait 1/2 a ms  
-      digitalWrite(5,LOW); // Output low  
+      digitalWrite(5,LOW); // Output low for motor 1 
+      digitalWrite(12,LOW); // Output low for motor 2  
       delayMicroseconds(800); // Wait 1/2 a ms  
     }  
   delay(1000); // pause one second  
     
-  digitalWrite(4,LOW); // Set Dir low  
+  digitalWrite(4,LOW); // Set Dir low for motor 1
+  digitalWrite(13,LOW); // Set Dir low for motor 2
     
   for(x = 0; x < 800; x++) // Loop 2000 times  
   {  
-      digitalWrite(5,HIGH); // Output high  
+      digitalWrite(5,HIGH); // Output high for motor 1 
+      digitalWrite(12,HIGH); // Output high for motor 2
       delayMicroseconds(800); // Wait 1/2 a ms  
-      digitalWrite(5,LOW); // Output low  
-      delayMicroseconds(800); // Wait 1/2 a ms  
-    }  
-    delay(1000); // pause one second  
-    
-    digitalWrite(13,HIGH); // Set Dir high  
-    
-  for(x = 0; x < 800; x++) // Loop 200 times  
-  {  
-      digitalWrite(12,HIGH); // Output high  
-      delayMicroseconds(800 ); // Wait 1/2 a ms  
-      digitalWrite(12,LOW); // Output low  
-      delayMicroseconds(800); // Wait 1/2 a ms  
-    }  
-  delay(1000); // pause one second  
-    
-  digitalWrite(13,LOW); // Set Dir low  
-    
-  for(x = 0; x < 800; x++) // Loop 2000 times  
-  {  
-      digitalWrite(12,HIGH); // Output high  
-      delayMicroseconds(800); // Wait 1/2 a ms  
-      digitalWrite(12,LOW); // Output low  
+      digitalWrite(5,LOW); // Output low for motor 1
+      digitalWrite(12,LOW); // Output low for motor 2
       delayMicroseconds(800); // Wait 1/2 a ms  
     }  
     delay(1000); // pause one second  
